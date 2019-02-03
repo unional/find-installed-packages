@@ -40,4 +40,10 @@ describe('find local', () => {
     const actual = await findByKeyword('some-keyword', { cwd: 'fixtures/at-types-plugin' })
     expect(actual).toEqual([])
   })
+
+  test('should not get package not under top node_modules hierarchy', async () => {
+    const packagesInfo = await findByKeyword('some-keyword')
+
+    expect(packagesInfo).toEqual([])
+  })
 })

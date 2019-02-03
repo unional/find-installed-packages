@@ -10,7 +10,7 @@ export async function findPackagesInfo(cwd: string): Promise<{ name: string, pat
       return
     }
     find.dir('node_modules', cwd, dirs => {
-      a(dirs.filter(isPackagePath).map(d => path.join(d, '..')))
+      a(dirs.filter(dir => isPackagePath(cwd, dir)).map(d => path.join(d, '..')))
     })
   })
 
@@ -42,7 +42,9 @@ function readDirSafe(path: string) {
 }
 
 
-function isPackagePath(dir: string) {
+function isPackagePath(cwd: string, dir: string) {
+  if (!path.relative(cwd, dir).startsWith('node_modules')) return false
+
   const matches = /node_modules\/(.*)\/node_modules/.exec(dir)
   if (!matches) return true
 
