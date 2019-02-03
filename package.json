@@ -1,0 +1,41 @@
+{
+  "name": "find-installed-packages",
+  "description": "Find installed packages",
+  "version": "0.0.0-development",
+  "homepage": "https://github.com/unional/find-installed-packages",
+  "bugs": {
+    "url": "https://github.com/unional/find-installed-packages/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unional/find-installed-packages.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Homa Wong (unional)",
+    "email": "homawong@gmail.com"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rimraf lib",
+    "dc": "npm run dependency-check",
+    "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest",
+    "verify": "npm run lint && npm run build && npm run dependency-check && jest --coverage",
+    "watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.25",
+    "@types/find": "^0.2.1",
+    "@unional/devpkg-node": "^1.2.3",
+    "assertron": "^6.1.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "find": "^0.2.9",
+    "unpartial": "^0.4.1"
+  }
+}
