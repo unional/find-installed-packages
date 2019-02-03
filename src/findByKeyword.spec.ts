@@ -1,4 +1,4 @@
-import { findByKeyword } from './findByKeyword';
+import { findByKeyword } from '.';
 
 describe('find local', () => {
   test('not exist folder returns empty array', async () => {
@@ -35,5 +35,9 @@ describe('find local', () => {
     const actual = await findByKeyword('some-keyword', { cwd: 'fixtures/nested-scoped-one-plugin' })
     expect(actual).toEqual(['@some-scope/plugin-a'])
   })
-})
 
+  test('@types is ignored', async () => {
+    const actual = await findByKeyword('some-keyword', { cwd: 'fixtures/at-types-plugin' })
+    expect(actual).toEqual([])
+  })
+})

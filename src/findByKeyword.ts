@@ -16,8 +16,8 @@ export async function findByKeyword(keyword: string, options: Partial<FindOption
 
     const content = readFileSafe(path.resolve(cwd, pkg.path, 'package.json'))
     if (!content) return false
-    const pjson = content ? JSON.parse(content) : undefined
-    if (!pjson || !pjson.keywords) return false
+    const pjson = JSON.parse(content)
+    if (!pjson.keywords) return false
     return pjson.keywords.indexOf(keyword) !== -1
   }).map(pkg => pkg.name)
 }
@@ -50,11 +50,12 @@ async function findPackagesInfo(cwd: string): Promise<{ name: string, path: stri
 
 function readDirSafe(path: string) {
   return new Promise<string[]>((a, r) => {
-    fs.readdir(path, (err, dirs = []) => {
+    fs.readdir(path, (err, dirs) => {
       // istanbul ignore next
       if (err && err.code !== 'ENOENT')
         r(err)
-      a(dirs)
+      else
+        a(dirs)
     })
   })
 }
