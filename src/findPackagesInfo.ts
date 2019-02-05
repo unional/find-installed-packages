@@ -18,11 +18,13 @@ export async function findPackagesInfo(cwd: string): Promise<{ name: string, pat
     const nodeModulesPath = path.resolve(baseDir, 'node_modules')
     const dirs = await readDirSafe(nodeModulesPath)
     await Promise.all(dirs.map(async dir => {
-      if (!dir.startsWith('@'))
-        packages.push({ name: dir, path: path.join(nodeModulesPath, dir) })
-      else if (dir !== '@types') {
-        const foldersInScopedDir = await readDirSafe(path.resolve(nodeModulesPath, dir))
-        packages.push(...foldersInScopedDir.map(d => ({ name: `${dir}/${d}`, path: path.join(nodeModulesPath, dir, d) })))
+      if (fs.statSync(path.join(nodeModulesPath, dir)).isDirectory()) {
+        if (!dir.startsWith('@'))
+          packages.push({ name: dir, path: path.join(nodeModulesPath, dir) })
+        else if (dir !== '@types') {
+          const foldersInScopedDir = await readDirSafe(path.resolve(nodeModulesPath, dir))
+          packages.push(...foldersInScopedDir.map(d => ({ name: `${dir}/${d}`, path: path.join(nodeModulesPath, dir, d) })))
+        }
       }
     }))
     return packages
@@ -40,7 +42,6 @@ function readDirSafe(path: string) {
     })
   })
 }
-
 
 function isPackagePath(cwd: string, dir: string) {
   if (!path.relative(cwd, dir).startsWith('node_modules')) return false
