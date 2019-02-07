@@ -61,4 +61,9 @@ describe('find local', () => {
 
     expect(packagesInfo).toEqual([])
   })
+
+  test('ignore files under node_modules', async () => {
+    const packagesInfo = await findByKeywords(['some'], { cwd: 'fixtures/node_modules-with-file' })
+    expect(packagesInfo.length).toBe(0)
+  })
 })
