@@ -2,12 +2,13 @@ import path from 'path';
 import { unpartial } from 'unpartial';
 import { findPackagesInfo } from './findPackagesInfo';
 import { readFileSafe } from './readFileSafe';
+import { hasAllKeywords } from './hasAllKeywords';
 
 export type FindOptions = {
   cwd: string
 }
 
-export async function findByKeyword(keyword: string, options?: Partial<FindOptions>) {
+export async function findByKeywords(keywords: string[], options?: Partial<FindOptions>) {
   const { cwd } = unpartial({ cwd: '.' }, options)
 
   const pkgInfos = await findPackagesInfo(cwd)
@@ -16,6 +17,6 @@ export async function findByKeyword(keyword: string, options?: Partial<FindOptio
     if (!content) return false
     const pjson = JSON.parse(content)
     if (!pjson.keywords) return false
-    return pjson.keywords.indexOf(keyword) !== -1
+    return hasAllKeywords(pjson.keywords, keywords)
   }).map(pkg => pkg.name)
 }

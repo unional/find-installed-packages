@@ -1,1 +1,1 @@
-export * from './findByKeyword'
+export * from './findByKeywords'
