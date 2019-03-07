@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "bluebird": "^3.5.3",
-    "find": "^0.2.9",
+    "find": "^0.3.0",
     "unpartial": "^0.4.1"
   }
 }
