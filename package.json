@@ -31,7 +31,7 @@
     "@types/bluebird": "^3.5.25",
     "@types/find": "^0.2.1",
     "@unional/devpkg-node": "^1.2.3",
-    "assertron": "^6.1.0"
+    "assertron": "^7.0.0"
   },
   "dependencies": {
     "bluebird": "^3.5.3",
