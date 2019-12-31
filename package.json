@@ -27,14 +27,14 @@
     "lint": "eslint --ext=js,ts .",
     "test": "jest",
     "verify": "npm run lint && npm run build && npm run dependency-check && jest --coverage",
-    "watch": "jest --watch"
+    "watch": "jest --watch",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "bluebird": "^3.5.5",
     "find": "^0.3.0",
     "temp": "^0.9.1",
-    "unpartial": "^0.6.3",
-    "walkdir": "^0.4.1"
+    "unpartial": "^0.6.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
