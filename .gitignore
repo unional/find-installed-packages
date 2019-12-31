@@ -43,5 +43,5 @@ jspm_packages
 
 # project folders
 dist*
-lib
+lib*
 out*
