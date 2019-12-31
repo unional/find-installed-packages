@@ -1,13 +1,11 @@
 # find-installed-packages
 
-![unstable][unstable-image]
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][downloads-image]][downloads-url]
 
-[![Circle CI][circleci-image]][circleci-url]
-[![Travis CI][travis-image]][travis-url]
+[![Github NodeJS][github-nodejs]][github-action-url]
 [![Codecov][codecov-image]][codecov-url]
-[![Coveralls Status][coveralls-image]][coveralls-url]
+[![Codacy Badge][codacy-image]][codacy-url]
 
 [![Greenkeeper][greenkeeper-image]][greenkeeper-url]
 [![Semantic Release][semantic-release-image]][semantic-release-url]
@@ -44,23 +42,20 @@ git push
 # create PR
 ```
 
-[circleci-image]: https://circleci.com/gh/unional/find-installed-packages/tree/master.svg?style=shield
-[circleci-url]: https://circleci.com/gh/unional/find-installed-packages/tree/master
+[codacy-image]: https://api.codacy.com/project/badge/Grade/fdf9435f584146b2aef88750c315c17a
+[codacy-url]: https://www.codacy.com/manual/homawong/find-installed-packages?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=unional/find-installed-packages&amp;utm_campaign=Badge_Grade
 [codecov-image]: https://codecov.io/gh/unional/find-installed-packages/branch/master/graph/badge.svg
 [codecov-url]: https://codecov.io/gh/unional/find-installed-packages
-[coveralls-image]: https://coveralls.io/repos/github/unional/find-installed-packages/badge.svg?branch=master
-[coveralls-url]: https://coveralls.io/github/unional/find-installed-packages?branch=master
 [downloads-image]: https://img.shields.io/npm/dm/find-installed-packages.svg?style=flat
 [downloads-url]: https://npmjs.org/package/find-installed-packages
+[github-nodejs]: https://github.com/unional/find-installed-packages/workflows/nodejs/badge.svg
+[github-action-url]: https://github.com/unional/find-installed-packages/actions
 [greenkeeper-image]: https://badges.greenkeeper.io/unional/find-installed-packages.svg
 [greenkeeper-url]: https://greenkeeper.io/
 [npm-image]: https://img.shields.io/npm/v/find-installed-packages.svg?style=flat
 [npm-url]: https://npmjs.org/package/find-installed-packages
 [semantic-release-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 [semantic-release-url]: https://github.com/semantic-release/semantic-release
-[travis-image]: https://img.shields.io/travis/unional/find-installed-packages/master.svg?style=flat
-[travis-url]: https://travis-ci.org/unional/find-installed-packages?branch=master
-[unstable-image]: https://img.shields.io/badge/stability-unstable-yellow.svg
 [vscode-image]: https://img.shields.io/badge/vscode-ready-green.svg
 [vscode-url]: https://code.visualstudio.com/
 [wallaby-image]: https://img.shields.io/badge/wallaby.js-configured-green.svg
