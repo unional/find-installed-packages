@@ -33,6 +33,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
+    "temp": "^0.9.1",
     "unpartial": "^0.6.3"
   },
   "devDependencies": {
