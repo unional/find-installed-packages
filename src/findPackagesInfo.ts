@@ -23,6 +23,7 @@ function recurseFind(cwd: string) {
       subDirs.forEach(sd => {
         const packagePath = path.join(nodeModulesDir, dir, sd)
         const stat = fs.statSync(packagePath)
+        // istanbul ignore next
         if (!stat.isDirectory()) return
         p.push({ name: `${dir}/${sd}`, ctimeMs: stat.ctimeMs, path: packagePath })
         p.push(...recurseFind(packagePath))

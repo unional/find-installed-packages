@@ -15,6 +15,7 @@ export function getCachedPackages(key: string, lastCtimeMs: number): string[] | 
   const cache = loadCache()
   const entry = cache[key]
   if (entry) {
+    // istanbul ignore next
     if (entry.ctimeMs < lastCtimeMs) {
       delete cache[key]
       saveCache(cache)
