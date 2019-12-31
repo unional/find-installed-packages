@@ -1,4 +1,9 @@
-import { findByKeywords } from '.';
+import { findByKeywords } from '.'
+import { clearCache } from './cachePackages'
+
+beforeAll(() => {
+  clearCache()
+})
 
 describe('find local', () => {
   test('not exist folder returns empty array', async () => {
@@ -65,5 +70,10 @@ describe('find local', () => {
   test('ignore files under node_modules', async () => {
     const packagesInfo = await findByKeywords(['some'], { cwd: 'fixtures/node_modules-with-file' })
     expect(packagesInfo.length).toBe(0)
+  })
+
+  test('find again loads from cache', async () => {
+    const actual = await findByKeywords(['some-keyword'], { cwd: 'fixtures/nested-scoped-one-plugin' })
+    expect(actual).toEqual(['@some-scope/plugin-a'])
   })
 })
