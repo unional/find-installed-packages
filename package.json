@@ -20,6 +20,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "clean": "rimraf lib",
+    "codacy": "cat coverage/lcov.info | codacy-coverage",
+    "coverage": "jest --coverage",
     "dc": "npm run dependency-check",
     "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
     "lint": "eslint --ext=js,ts .",
@@ -35,10 +37,18 @@
     "walkdir": "^0.4.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@semantic-release/changelog": "^3.0.6",
     "@types/bluebird": "^3.5.27",
     "@types/find": "^0.2.1",
     "@types/temp": "^0.8.34",
     "@unional/devpkg-node": "^1.4.2",
-    "assertron": "^7.1.2"
+    "assertron": "^7.1.2",
+    "codacy-coverage": "^3.4.0",
+    "codecov": "^3.6.1",
+    "commitlint-circle": "^1.0.0",
+    "husky": "^3.1.0",
+    "semantic-release": "^15.14.0"
   }
 }
