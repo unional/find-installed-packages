@@ -1,11 +1,7 @@
 {
-  "extends": "./tsconfig.build.json",
+  "extends": "./tsconfig.libm.json",
   "compilerOptions": {
-    "plugins": [
-      {
-        "name": "tslint-language-service"
-      }
-    ]
+    "noEmit": true,
   },
   "include": [
     "src",

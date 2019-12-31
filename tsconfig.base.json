@@ -1,16 +1,13 @@
 {
   "compilerOptions": {
-    "declaration": true,
     "esModuleInterop": true,
     "lib": [
       "es2015"
     ],
-    "module": "commonjs",
     "moduleResolution": "node",
     "newLine": "LF",
     "noUnusedLocals": true,
     "noUnusedParameters": false,
-    "outDir": "lib",
     "removeComments": false,
     "sourceMap": true,
     "strict": true
