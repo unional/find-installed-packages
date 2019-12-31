@@ -22,6 +22,7 @@ export function setCachedPackages(key: string, packages: string[]) {
   saveCache(cache)
 }
 
+// istanbul ignore next
 export function clearCache() {
   if (fs.existsSync(filepath)) fs.unlinkSync(filepath)
 }
