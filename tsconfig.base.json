@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
+    "inlineSources": true,
     "lib": [
       "es2015"
     ],
