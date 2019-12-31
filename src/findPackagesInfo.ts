@@ -1,14 +1,15 @@
-import Bluebird from 'bluebird';
-import find from 'find';
-import fs from 'fs';
-import path from 'path';
+import Bluebird from 'bluebird'
+import fs from 'fs'
+import path from 'path'
+import find from 'find'
 
 export async function findPackagesInfo(cwd: string): Promise<{ name: string, path: string }[]> {
-  let baseDirs = await new Promise<string[]>(a => {
+  const baseDirs = await new Promise<string[]>(a => {
     if (!fs.existsSync(cwd)) {
       a([])
       return
     }
+
     find.dir('node_modules', cwd, dirs => {
       a(dirs.filter(dir => isPackagePath(cwd, dir)).map(d => path.join(d, '..')))
     })
@@ -49,5 +50,5 @@ function isPackagePath(cwd: string, dir: string) {
   const matches = /node_modules\/(.*)\/node_modules/.exec(dir)
   if (!matches) return true
 
-  return /\@.*\/.*/.test(matches[1]) || /^[^\/]+$/.test(matches[1])
+  return /@.*\/.*/.test(matches[1]) || /^[^/]+$/.test(matches[1])
 }
