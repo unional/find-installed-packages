@@ -27,7 +27,7 @@ export async function findByKeywords(keywords: string[], options?: Partial<FindO
 
 async function getPackages(keywords: string[], cwd: string) {
   const pkgInfos = findPackagesInfo(cwd)
-    return pkgInfos.filter(pkg => {
+  return pkgInfos.filter(pkg => {
     const content = readFileSafe(path.resolve(pkg.path, 'package.json'))
     if (!content) return false
     const pjson = JSON.parse(content)
