@@ -1,54 +1,36 @@
-import Bluebird from 'bluebird'
 import fs from 'fs'
 import path from 'path'
-import find from 'find'
+export type PackageInfo = { name: string, path: string }
 
-export async function findPackagesInfo(cwd: string): Promise<{ name: string, path: string }[]> {
-  const baseDirs = await new Promise<string[]>(a => {
-    if (!fs.existsSync(cwd)) {
-      a([])
-      return
+export function findPackagesInfo(cwd: string): PackageInfo[] {
+  if (!fs.existsSync(cwd)) return []
+
+  return recurseFind(cwd)
+}
+
+function recurseFind(cwd: string) {
+  const nodeModulesDir = path.join(cwd, 'node_modules')
+  if (!fs.existsSync(nodeModulesDir)) return []
+
+  const dirs = fs.readdirSync(nodeModulesDir)
+  return dirs.reduce((p, dir) => {
+    const packagePath = path.join(nodeModulesDir, dir)
+    if (!fs.statSync(packagePath).isDirectory()) return p
+    if (dir.startsWith('@')) {
+      if (dir === '@types') return p
+      const subDirs = fs.readdirSync(path.join(nodeModulesDir, dir))
+      subDirs.forEach(sd => {
+        const packagePath = path.join(nodeModulesDir, dir, sd)
+        if (!fs.statSync(packagePath).isDirectory()) return
+        p.push({ name: `${dir}/${sd}`, path: packagePath })
+        p.push(...recurseFind(packagePath))
+      })
+    }
+    else {
+      p.push({ name: dir, path: packagePath })
+      p.push(...recurseFind(packagePath))
     }
 
-    find.dir('node_modules', cwd, dirs => {
-      a(dirs.filter(dir => isPackagePath(cwd, dir)).map(d => path.join(d, '..')))
-    })
-  })
-
-  return Bluebird.reduce(baseDirs, async (packages: { name: string, path: string }[], baseDir) => {
-    const nodeModulesPath = path.resolve(baseDir, 'node_modules')
-    const dirs = await readDirSafe(nodeModulesPath)
-    await Promise.all(dirs.map(async dir => {
-      if (fs.statSync(path.join(nodeModulesPath, dir)).isDirectory()) {
-        if (!dir.startsWith('@'))
-          packages.push({ name: dir, path: path.join(nodeModulesPath, dir) })
-        else if (dir !== '@types') {
-          const foldersInScopedDir = await readDirSafe(path.resolve(nodeModulesPath, dir))
-          packages.push(...foldersInScopedDir.map(d => ({ name: `${dir}/${d}`, path: path.join(nodeModulesPath, dir, d) })))
-        }
-      }
-    }))
-    return packages
-  }, [])
-}
-
-function readDirSafe(path: string) {
-  return new Promise<string[]>((a, r) => {
-    fs.readdir(path, (err, dirs) => {
-      // istanbul ignore next
-      if (err && err.code !== 'ENOENT')
-        r(err)
-      else
-        a(dirs)
-    })
-  })
-}
-
-function isPackagePath(cwd: string, dir: string) {
-  if (!path.relative(cwd, dir).startsWith('node_modules')) return false
-
-  const matches = /node_modules\/(.*)\/node_modules/.exec(dir)
-  if (!matches) return true
-
-  return /@.*\/.*/.test(matches[1]) || /^[^/]+$/.test(matches[1])
+    return p
+  }, [] as PackageInfo[])
 }

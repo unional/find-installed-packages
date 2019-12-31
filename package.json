@@ -33,17 +33,13 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "bluebird": "^3.5.5",
     "find": "^0.3.0",
-    "temp": "^0.9.1",
     "unpartial": "^0.6.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "@semantic-release/changelog": "^3.0.6",
-    "@types/bluebird": "^3.5.27",
-    "@types/find": "^0.2.1",
     "@types/temp": "^0.8.34",
     "@unional/devpkg-node": "^1.4.2",
     "assertron": "^7.1.2",
