@@ -11,14 +11,24 @@ export function getCacheKey(keywords: string[], cwd: string): string {
   return JSON.stringify({ cwd: path.resolve(cwd), keywords: keywords.sort() })
 }
 
-export function getCachedPackages(key: string): string[] | undefined {
+export function getCachedPackages(key: string, lastCtimeMs: number): string[] | undefined {
   const cache = loadCache()
-  return cache[key]
+  const entry = cache[key]
+  if (entry) {
+    if (entry.ctimeMs < lastCtimeMs) {
+      delete cache[key]
+      saveCache(cache)
+      return undefined
+    }
+    return entry.packages
+  }
+
+  return undefined
 }
 
-export function setCachedPackages(key: string, packages: string[]) {
+export function setCachedPackages(key: string, ctimeMs: number, packages: string[]) {
   const cache = loadCache()
-  cache[key] = packages
+  cache[key] = { ctimeMs, packages }
   saveCache(cache)
 }
 

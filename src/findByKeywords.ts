@@ -9,29 +9,25 @@ import { getCacheKey, getCachedPackages, setCachedPackages } from './cachePackag
 
 export async function findByKeywords(keywords: string[], options?: Partial<FindOptions>) {
   const { cwd } = unpartial({ cwd: '.' }, options)
-  const cacheKey = getCacheKey(keywords, cwd)
-  const cache = getCachedPackages(cacheKey)
-  if (cache) {
-    // istanbul ignore next
-    setImmediate(async () => {
-      const packages = await getPackages(keywords, cwd)
-      setCachedPackages(cacheKey, packages)
-    })
-    return cache
-  }
 
-  const packages = await getPackages(keywords, cwd)
-  setCachedPackages(cacheKey, packages)
-  return packages
+  return getPackages(keywords, cwd)
 }
 
 async function getPackages(keywords: string[], cwd: string) {
   const pkgInfos = findPackagesInfo(cwd)
-  return pkgInfos.filter(pkg => {
+  const ctimeMs = pkgInfos.reduce((t, p) => t > p.ctimeMs ? t : p.ctimeMs, 0)
+  const cacheKey = getCacheKey(keywords, cwd)
+  const cache = getCachedPackages(cacheKey, ctimeMs)
+  if (cache) return cache
+
+  const packages = pkgInfos.filter(pkg => {
     const content = readFileSafe(path.resolve(pkg.path, 'package.json'))
     if (!content) return false
     const pjson = JSON.parse(content)
     if (!pjson.keywords) return false
     return hasAllKeywords(pjson.keywords, keywords)
   }).map(pkg => pkg.name)
+
+  setCachedPackages(cacheKey, ctimeMs, packages)
+  return packages
 }
