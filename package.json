@@ -33,8 +33,12 @@
     "lint": "eslint --ext=js,ts .",
     "test": "jest",
     "verify": "yarn lint && yarn build && yarn dependency-check && jest --coverage",
-    "watch": "jest --watch",
-    "semantic-release": "semantic-release"
+    "watch": "jest --watch"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "dependencies": {
     "temp": "^0.9.1",
