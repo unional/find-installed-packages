@@ -1,5 +1,7 @@
 import a from 'assertron'
-import { getCacheKey } from './cachePackages';
+import { getCacheKey, getCachedPackages } from './cachePackages';
+import { getCacheFilepath } from './getCacheFilepath';
+import fs from 'fs'
 
 describe('getCacheKey', () => {
   test('cwd is expanded to absolute path', () => {
@@ -11,4 +13,10 @@ describe('getCacheKey', () => {
     const actual = getCacheKey(['b-key', 'a-key'], '.')
     expect(actual.indexOf(JSON.stringify(['a-key', 'b-key'])) >= 0).toBeTruthy()
   })
+});
+
+describe('getCachedPackage', () => {
+  const filepath = getCacheFilepath()
+  fs.writeFileSync(filepath, '{ invalid json')
+  expect(getCachedPackages('somkey', 0)).toBeUndefined()
 });
