@@ -1,9 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import temp from 'temp'
-
-const CACHE_FILE = '.find-installed-packages.cache'
-const filepath = path.join(temp.dir, CACHE_FILE)
+import { getCacheFilepath } from './getCacheFilepath'
 
 export type Cache = Record<string, string[]>
 
@@ -35,16 +32,24 @@ export function setCachedPackages(key: string, ctimeMs: number, packages: string
 
 // istanbul ignore next
 export function clearCache() {
+  const filepath = getCacheFilepath()
   if (fs.existsSync(filepath)) fs.unlinkSync(filepath)
 }
 
 // istanbul ignore next
 function loadCache() {
+  const filepath = getCacheFilepath()
   if (!fs.existsSync(filepath)) return {}
-  return JSON.parse(fs.readFileSync(filepath, { encoding: 'utf-8' }))
+  try {
+    return JSON.parse(fs.readFileSync(filepath, { encoding: 'utf-8' }))
+  }
+  catch (e) {
+    return {}
+  }
 }
 
 // istanbul ignore next
 function saveCache(cache: Cache) {
+  const filepath = getCacheFilepath()
   fs.writeFileSync(filepath, JSON.stringify(cache))
 }
