@@ -18,13 +18,13 @@ async function getPackages(keywords: string[], cwd: string) {
   const cache = getCachedPackages(cacheKey, ctimeMs)
   if (cache) return cache
 
-  const packages = pkgInfos.filter(pkg => {
+  const packages = pkgInfos.reduce((p, pkg) => {
     const content = readFileSafe(path.resolve(pkg.path, 'package.json'))
-    if (!content) return false
+    if (!content) return p
     const pjson = JSON.parse(content)
-    if (!pjson.keywords) return false
-    return hasAllKeywords(pjson.keywords, keywords)
-  }).map(pkg => pkg.name)
+    if (hasAllKeywords(pjson.keywords, keywords)) p.push(pkg.name)
+    return p
+  }, [] as string[])
 
   setCachedPackages(cacheKey, ctimeMs, packages)
   return packages
