@@ -1,9 +1,7 @@
 import { findByKeywords } from '.'
 import { clearCache } from './cachePackages'
 
-beforeAll(() => {
-  clearCache()
-})
+beforeAll(() => { clearCache() })
 
 describe('find local', () => {
   test('not exist folder returns empty array', async () => {

@@ -1,7 +1,7 @@
-import a from 'assertron'
-import { getCacheKey, getCachedPackages } from './cachePackages';
+import a from 'assertron';
+import fs from 'fs';
+import { getCachedPackages, getCacheKey } from './cachePackages';
 import { getCacheFilepath } from './getCacheFilepath';
-import fs from 'fs'
 
 describe('getCacheKey', () => {
   test('cwd is expanded to absolute path', () => {
