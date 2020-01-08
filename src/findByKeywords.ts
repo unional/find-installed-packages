@@ -1,13 +1,11 @@
 import path from 'path'
 import { unpartial } from 'unpartial'
+import { getCachedPackages, getCacheKey, setCachedPackages } from './cachePackages'
 import { findPackagesInfo } from './findPackagesInfo'
 import { hasAllKeywords } from './hasAllKeywords'
 import { readFileSafe } from './readFileSafe'
-import { FindOptions } from './types'
-import { getCacheKey, getCachedPackages, setCachedPackages } from './cachePackages'
 
-
-export async function findByKeywords(keywords: string[], options?: Partial<FindOptions>) {
+export async function findByKeywords(keywords: string[], options?: { cwd?: string }) {
   const { cwd } = unpartial({ cwd: '.' }, options)
 
   return getPackages(keywords, cwd)
@@ -20,13 +18,13 @@ async function getPackages(keywords: string[], cwd: string) {
   const cache = getCachedPackages(cacheKey, ctimeMs)
   if (cache) return cache
 
-  const packages = pkgInfos.filter(pkg => {
+  const packages = pkgInfos.reduce((p, pkg) => {
     const content = readFileSafe(path.resolve(pkg.path, 'package.json'))
-    if (!content) return false
+    if (!content) return p
     const pjson = JSON.parse(content)
-    if (!pjson.keywords) return false
-    return hasAllKeywords(pjson.keywords, keywords)
-  }).map(pkg => pkg.name)
+    if (hasAllKeywords(pjson.keywords, keywords)) p.push(pkg.name)
+    return p
+  }, [] as string[])
 
   setCachedPackages(cacheKey, ctimeMs, packages)
   return packages
