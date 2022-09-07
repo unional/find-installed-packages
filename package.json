@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "temp": "^0.9.1",
-    "unpartial": "^0.6.3"
+    "unpartial": "^1.0.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
