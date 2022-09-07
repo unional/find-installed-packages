@@ -1,0 +1,10 @@
+ignores:
+  - '@types/node'
+  - "@commitlint/*"
+  - "@semantic-release/*"
+  - "@size-limit/preset-small-lib"
+  - "@types/jest"
+  - "@typescript-eslint/parser"
+  - jest-*
+  - semantic-release
+  - ts-jest

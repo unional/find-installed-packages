@@ -10,7 +10,7 @@ export function readFileSafe(path: string) {
   try {
     return fs.readFileSync(path, 'utf8')
   }
-  catch (err) {
+  catch (err: any) {
     // istanbul ignore next
     if (err.code === 'ENOENT')
       return undefined
