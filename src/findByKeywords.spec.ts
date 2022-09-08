@@ -74,4 +74,9 @@ describe('find local', () => {
     const actual = await findByKeywords(['some-keyword'], { cwd: 'fixtures/nested-scoped-one-plugin' })
     expect(actual).toEqual(['@some-scope/plugin-a'])
   })
+
+  it('should returns unique list', async () => {
+    const actual = await findByKeywords(['some-keyword'], { cwd: 'fixtures/recursive' })
+    expect(actual).toEqual(['@some-scope/plugin-a'])
+  })
 })
