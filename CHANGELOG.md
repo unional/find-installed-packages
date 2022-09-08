@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/unional/find-installed-packages/compare/v2.1.8...v3.0.0) (2022-09-08)
+
+
+### Bug Fixes
+
+* drop nodejs 12 support ([f4d1970](https://github.com/unional/find-installed-packages/commit/f4d197039ae8c9853bdb5374cf275cd1b05e6fe0))
+
+
+### BREAKING CHANGES
+
+* drop nodejs 12 support
+
 ## [2.1.8](https://github.com/unional/find-installed-packages/compare/v2.1.7...v2.1.8) (2022-09-08)
 
 
