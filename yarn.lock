@@ -1115,6 +1115,11 @@
   dependencies:
     "@octokit/openapi-types" "^13.9.0"
 
+"@rushstack/eslint-patch@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
+  integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
+
 "@semantic-release/changelog@6.0.1":
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-6.0.1.tgz#8dd0334fd8c7d50cda747d2591e4f18f816b3c9c"
@@ -2656,11 +2661,12 @@ eslint-config-prettier@8.5.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.5.0.tgz#5a81680ec934beca02c7b1a61cf8ca34b66feab1"
   integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
 
-eslint-plugin-harmony@7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-harmony/-/eslint-plugin-harmony-7.1.0.tgz#74b38d11e791a583488c767eb43eefdb3f995df2"
-  integrity sha512-+uJpoXXKbLqvadllSqyouKHgpNnYnIJmn0syQm/nQv7BG3QkjTavLWG2DNmV6Y8c544VkCIB3YWF2M59YPn/1g==
+eslint-plugin-harmony@7.1.1:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-harmony/-/eslint-plugin-harmony-7.1.1.tgz#b0d489acd6e6c143d211ed1e8b40fec22c63fd44"
+  integrity sha512-4LBcIFu4chZBVtza2tDSrl+st4+Vs2c1Zz6/YqruyR0ny3fC92JQx8uMC/JmmQfTbIssehKZClG7DKBWijdlmg==
   dependencies:
+    "@rushstack/eslint-patch" "^1.2.0"
     "@typescript-eslint/experimental-utils" "^5.23.0"
     "@typescript-eslint/parser" "^5.23.0"
 
