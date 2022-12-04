@@ -1841,10 +1841,10 @@ asap@^2.0.0:
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
 
-assertron@11.0.1:
-  version "11.0.1"
-  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.0.1.tgz#ceb8a2069a71bbf90fda6f75825738f1aaa4dba2"
-  integrity sha512-D1U7weslbYgIoItGhuRqasdvZtU/1dtO9cmeMhuUbcNzd6Zztp3mlNlUF/EtZBfgjSFLjgUhBxw5uabsDR/b8A==
+assertron@11.0.2:
+  version "11.0.2"
+  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.0.2.tgz#f49394ca1fe0af6a814f9b91c774f9ef667cf75a"
+  integrity sha512-n+q0F710IBcI6dUq2YJzmJxudjHoJAz4haS/gawZToBaQ8dP8eywjiPGN4Y+Rv2Czd3D/kmELxRgluLt6Hp7Nw==
   dependencies:
     is-promise "^4.0.0"
     iso-error "^4.3.5"
