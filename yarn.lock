@@ -1841,17 +1841,17 @@ asap@^2.0.0:
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
 
-assertron@11.0.2:
-  version "11.0.2"
-  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.0.2.tgz#f49394ca1fe0af6a814f9b91c774f9ef667cf75a"
-  integrity sha512-n+q0F710IBcI6dUq2YJzmJxudjHoJAz4haS/gawZToBaQ8dP8eywjiPGN4Y+Rv2Czd3D/kmELxRgluLt6Hp7Nw==
+assertron@11.0.3:
+  version "11.0.3"
+  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.0.3.tgz#ad66f876f0a958e067416b1fb2174cc88a61e017"
+  integrity sha512-DDbZZ4OXJ296Z0rvYVAiXSYHPgSjTiTBpZoVgA84USryBKofHbCRpAmOMa4SLk52ppIcOPWjLMf91ZWCXyEPqw==
   dependencies:
     is-promise "^4.0.0"
     iso-error "^4.3.5"
     path-equal "^1.2.2"
     satisfier "^5.2.2"
     tersify "^3.10.2"
-    type-plus "^4.10.1"
+    type-plus "^5.0.0"
 
 babel-jest@^29.3.1:
   version "29.3.1"
@@ -6337,6 +6337,15 @@ tersify@^3.10.2:
     is-buffer "^2.0.5"
     unpartial "^0.7.4"
 
+tersify@^3.11.1:
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/tersify/-/tersify-3.11.1.tgz#422cbdf8de944695f1fb006c333555030d3e98f5"
+  integrity sha512-W/Kv1z+cgDRsI10p9CyCZJ+gopPUVOz1/h7OPntr6D52iIHQTbsg40MBUoaG82q8IgD/GKoWhoujg/rOxQW7SA==
+  dependencies:
+    acorn "^8.8.0"
+    is-buffer "^2.0.5"
+    unpartial "^1.0.0"
+
 test-exclude@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-6.0.0.tgz#04a8698661d805ea6fa293b6cb9e63ac044ef15e"
@@ -6515,13 +6524,13 @@ type-fest@^3.0.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.2.0.tgz#2c8b49e775d9e314a73ea6fcee0b2e8549d5f886"
   integrity sha512-Il3wdLRzWvbAEtocgxGQA9YOoRVeVUGOMBtel5LdEpNeEAol6GJTLw8GbX6Z8EIMfvfhoOXs2bwOijtAZdK5og==
 
-type-plus@^4.10.1:
-  version "4.11.2"
-  resolved "https://registry.yarnpkg.com/type-plus/-/type-plus-4.11.2.tgz#0aea22cb98d2b0c7fe14b3b5946243a11e71bf1d"
-  integrity sha512-aR687KNF16JI+nKM/K+Ee+NXNR1LxfEelfQW4tsUsRj1T+sKAVPL5feEZQ8HRbQiQshg5dehV2XQNjAfejo2jg==
+type-plus@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/type-plus/-/type-plus-5.0.0.tgz#7551429fc15970545f253dd4db106247b1df3770"
+  integrity sha512-nKp5pOQDldmR9BdEjLplLFwiXTVhOK2kReBSgVJ65URDLXCqENYzVDCONaExADIIc1CAGzvzTkB0TUgMAWR2qQ==
   dependencies:
-    tersify "^3.10.2"
-    unpartial "^1.0.1"
+    tersify "^3.11.1"
+    unpartial "^1.0.4"
 
 typescript@4.9.4:
   version "4.9.4"
@@ -6589,7 +6598,12 @@ unpartial@^0.7.4:
   resolved "https://registry.yarnpkg.com/unpartial/-/unpartial-0.7.5.tgz#68393e88f4e4d6ac2f622a18dfc9e495a32ab910"
   integrity sha512-02G/AkbF7MkgaEOAJmCe7P0UYzJVkMkAIU5YEJsO5QmDX7vkqyNctVi1gPm8YLVlGo5T/Qe/hYA66AuliEKBag==
 
-unpartial@^1.0.1, unpartial@^1.0.2:
+unpartial@^1.0.0, unpartial@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/unpartial/-/unpartial-1.0.4.tgz#56490ed475105110cee61890a80c5da394741833"
+  integrity sha512-xY8319WOQcRDRVFWvTty2YJXKvM8XRPehqWZUd7k/BatpbuitI4Jd+2xlwjTZbZScSvT75TnUsUmy5uwFa3o0g==
+
+unpartial@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/unpartial/-/unpartial-1.0.2.tgz#f925a6013a70831fe6d2d5dea7300fd6ca1b3637"
   integrity sha512-BhtFRJKwDMB6xuuvz3WTYYS2Lb6uOKPTAwOyDe61+L8Gk1oSAhyOjpwhrjGgT/ilo2rPO1+7eAjLWC04iWBhRQ==
