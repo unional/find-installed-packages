@@ -1835,17 +1835,17 @@ asap@^2.0.0:
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
 
-assertron@11.0.3:
-  version "11.0.3"
-  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.0.3.tgz#ad66f876f0a958e067416b1fb2174cc88a61e017"
-  integrity sha512-DDbZZ4OXJ296Z0rvYVAiXSYHPgSjTiTBpZoVgA84USryBKofHbCRpAmOMa4SLk52ppIcOPWjLMf91ZWCXyEPqw==
+assertron@11.1.1:
+  version "11.1.1"
+  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.1.1.tgz#4f4419ae358587308769e36325021ef5bf12894e"
+  integrity sha512-COdaURJ626RH/tBOnC6sKtJexlgKYa6SNIODggpfAc9/Y295c6W4XM0y96zICJsgsQLzybIgCzZX3ntaSZAs2Q==
   dependencies:
     is-promise "^4.0.0"
-    iso-error "^4.3.5"
-    path-equal "^1.2.2"
-    satisfier "^5.2.2"
-    tersify "^3.10.2"
-    type-plus "^5.0.0"
+    iso-error "^5.0.2"
+    path-equal "^1.2.5"
+    satisfier "^5.4.2"
+    tersify "^3.11.1"
+    type-plus "^5.1.0"
 
 babel-jest@^29.3.1:
   version "29.3.1"
@@ -3652,10 +3652,10 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
-iso-error@^4.3.5:
-  version "4.3.8"
-  resolved "https://registry.yarnpkg.com/iso-error/-/iso-error-4.3.8.tgz#bd7ffc94e1c115ba8057fa05b9fbe11fb7ce2029"
-  integrity sha512-+8YKN8LRIV8FC9h62mdpQgOkeVfI/o4XZguNqCTHmXysGsFMJGeiosXkUYZyiQNbZOEw8g0czL0E596pp5E3+Q==
+iso-error@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/iso-error/-/iso-error-5.0.2.tgz#4b3f90052c44277dfd93a21a7201c5c03ed6197d"
+  integrity sha512-Yf9e0ROw4TpMHU92s2YeV0G05cOk5/HkQiRZxYAUqfI9ls5wLIPI+5plTLOrFJIPeohMOVNdFZqiUiB55QHIqA==
 
 issue-parser@^6.0.0:
   version "6.0.0"
@@ -5383,10 +5383,10 @@ parse-json@^5.0.0, parse-json@^5.2.0:
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
 
-path-equal@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/path-equal/-/path-equal-1.2.2.tgz#fa2997f0a829de22ec8f5f86461ca5590d49b832"
-  integrity sha512-AUJvbcle1Zgb1TgtftHYknlrgrSYyI1ytrYgSbKUHSybwqUDnbD2cw9PIWivuMvsN+GTXmr/DRN4VBXpHG6aGg==
+path-equal@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/path-equal/-/path-equal-1.2.5.tgz#9fcbdd5e5daee448e96f43f3bac06c666b5e982a"
+  integrity sha512-i73IctDr3F2W+bsOWDyyVm/lqsXO47aY9nsFZUjTT/aljSbkxHxxCoyZ9UUrM8jK0JVod+An+rl48RCsvWM+9g==
 
 path-exists@^3.0.0:
   version "3.0.0"
@@ -5872,10 +5872,10 @@ sass@^1.29.0:
     immutable "^4.0.0"
     source-map-js ">=0.6.2 <2.0.0"
 
-satisfier@^5.2.2:
-  version "5.2.2"
-  resolved "https://registry.yarnpkg.com/satisfier/-/satisfier-5.2.2.tgz#f2c0769e3293d5a4e2e1895d24dcd85c85fa10d9"
-  integrity sha512-VEMcWR7F9xCqWtmjt8HetuycNAPqP5MPcZrYTs+DshHNiE39jWLPjdZeTt/+bhh4ogge2OuktNOWTMcQHAOHcA==
+satisfier@^5.4.2:
+  version "5.4.2"
+  resolved "https://registry.yarnpkg.com/satisfier/-/satisfier-5.4.2.tgz#04952bfbeda4d686c0209fa62d6fcb6040d47009"
+  integrity sha512-K1QPzEPjiC/7FcwiCwRH218SS3OVEWlx56EcHI+tZIf+TaAs+OHwwruAD4ke6xvRk/QniwSPkP98o9Oo84RxGQ==
   dependencies:
     tersify "^3.10.2"
 
@@ -6535,10 +6535,10 @@ type-fest@^3.0.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.2.0.tgz#2c8b49e775d9e314a73ea6fcee0b2e8549d5f886"
   integrity sha512-Il3wdLRzWvbAEtocgxGQA9YOoRVeVUGOMBtel5LdEpNeEAol6GJTLw8GbX6Z8EIMfvfhoOXs2bwOijtAZdK5og==
 
-type-plus@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/type-plus/-/type-plus-5.0.0.tgz#7551429fc15970545f253dd4db106247b1df3770"
-  integrity sha512-nKp5pOQDldmR9BdEjLplLFwiXTVhOK2kReBSgVJ65URDLXCqENYzVDCONaExADIIc1CAGzvzTkB0TUgMAWR2qQ==
+type-plus@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/type-plus/-/type-plus-5.1.0.tgz#f34bda836ad6f42ec88db263b1b50bb6de92d51e"
+  integrity sha512-1+meU/urZTVvH0bvMgQkGtkVU6qUTkXSH36CTeRXjhzlOYKVW8/i5AuG0divp3LE6d3iUODBPzraLDrL2iB91Q==
   dependencies:
     tersify "^3.11.1"
     unpartial "^1.0.4"
