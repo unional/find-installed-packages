@@ -1835,13 +1835,13 @@ asap@^2.0.0:
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
 
-assertron@11.1.1:
-  version "11.1.1"
-  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.1.1.tgz#4f4419ae358587308769e36325021ef5bf12894e"
-  integrity sha512-COdaURJ626RH/tBOnC6sKtJexlgKYa6SNIODggpfAc9/Y295c6W4XM0y96zICJsgsQLzybIgCzZX3ntaSZAs2Q==
+assertron@11.1.2:
+  version "11.1.2"
+  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.1.2.tgz#b7601890b8139b02fd793005aa171094bb0ee372"
+  integrity sha512-KjGeD9BQ+gYqcKPeb9dX2jDoxVOv7hvcRdyGPHngiCUnsLlxOVW1AdZbPMASlJ/adi5KoknioAaicx+E+dvxdA==
   dependencies:
     is-promise "^4.0.0"
-    iso-error "^5.0.2"
+    iso-error "^6.0.0"
     path-equal "^1.2.5"
     satisfier "^5.4.2"
     tersify "^3.11.1"
@@ -3652,10 +3652,10 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
-iso-error@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/iso-error/-/iso-error-5.0.2.tgz#4b3f90052c44277dfd93a21a7201c5c03ed6197d"
-  integrity sha512-Yf9e0ROw4TpMHU92s2YeV0G05cOk5/HkQiRZxYAUqfI9ls5wLIPI+5plTLOrFJIPeohMOVNdFZqiUiB55QHIqA==
+iso-error@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/iso-error/-/iso-error-6.0.0.tgz#ecd085fb672bf876e26f795ea199edef10ea9cc5"
+  integrity sha512-5rbZLnE/HhN1I9JA0zXtDG1LHzaXXGejhP5yRRmtK50B1DKD1ppZbf848USXE1wvZNxESbyIs3lRrNVcd6F0Fg==
 
 issue-parser@^6.0.0:
   version "6.0.0"
