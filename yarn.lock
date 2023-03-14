@@ -2766,10 +2766,10 @@ eslint-config-prettier@8.7.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.7.0.tgz#f1cc58a8afebc50980bd53475451df146c13182d"
   integrity sha512-HHVXLSlVUhMSmyW4ZzEuvjpwqamgmlfkutD53cYXLikh4pt/modINRcCIApJ84czDxM4GZInwUrromsDdTImTA==
 
-eslint-plugin-harmony@7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-harmony/-/eslint-plugin-harmony-7.1.1.tgz#b0d489acd6e6c143d211ed1e8b40fec22c63fd44"
-  integrity sha512-4LBcIFu4chZBVtza2tDSrl+st4+Vs2c1Zz6/YqruyR0ny3fC92JQx8uMC/JmmQfTbIssehKZClG7DKBWijdlmg==
+eslint-plugin-harmony@7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-harmony/-/eslint-plugin-harmony-7.1.2.tgz#4997d11d0631b594c130d9adfa5303eab7369d03"
+  integrity sha512-45MPltz+iTWdJ4FTXNOy3fB1kgsM8XFB6qum24qsclb9yh3kkBuk9Myzu8Rcyv8u/GldcTZQJ1xvHBNneISk9Q==
   dependencies:
     "@rushstack/eslint-patch" "^1.2.0"
     "@typescript-eslint/experimental-utils" "^5.23.0"
