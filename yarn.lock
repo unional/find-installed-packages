@@ -1900,17 +1900,17 @@ asap@^2.0.0:
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
 
-assertron@11.1.4:
-  version "11.1.4"
-  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.1.4.tgz#0165cd542eac9a53c9280d569d3e224494a76bc0"
-  integrity sha512-MzLEHA140ysLiJrN3fwCeC55xHmynD/um1L7EZ29rlFj2jsfN2ysbPGCYpt25qaMwev2nM4qDJ0mc1xtHIhTGA==
+assertron@11.2.0:
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.2.0.tgz#5d84a144a8c91bcf3b66cfdc97c72cf1d1c7c717"
+  integrity sha512-YydI8Co1JBIy5EziIZ3uyE3WQdy2Rvh0+a5BfgHYjWr8jyqZYFcOUc94J+sykNoCMciaQLXdxtbCFqiuCZnaew==
   dependencies:
     is-promise "^4.0.0"
     iso-error "^6.0.0"
     path-equal "^1.2.5"
     satisfier "^5.4.2"
     tersify "^3.11.1"
-    type-plus "^6.0.0"
+    type-plus "^6.5.0"
 
 babel-jest@^29.5.0:
   version "29.5.0"
@@ -6636,10 +6636,10 @@ type-fest@^3.0.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.2.0.tgz#2c8b49e775d9e314a73ea6fcee0b2e8549d5f886"
   integrity sha512-Il3wdLRzWvbAEtocgxGQA9YOoRVeVUGOMBtel5LdEpNeEAol6GJTLw8GbX6Z8EIMfvfhoOXs2bwOijtAZdK5og==
 
-type-plus@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/type-plus/-/type-plus-6.0.0.tgz#0ad1ace3dafbcba9df80418b6302fdf966ba284d"
-  integrity sha512-ezkCTr6LGC87w9LHc83XJnJFfaeEa/nPhr4yzBKv2+Pw0y4FXKHgrJ2GWM4H1nSKzcEPv4q/Sfw4MKmi8NTxbg==
+type-plus@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/type-plus/-/type-plus-6.5.0.tgz#f165fd37e39f31a27c5749766c2a7d5543bedab6"
+  integrity sha512-N7/MeQNU4dAePO4aWOwA6E/moBX+W/NHLtHnjQ9Qet5LPoq9v3pSIg1ofi/tlRNDdBXBZoEf8URNbvygWVXulA==
   dependencies:
     tersify "^3.11.1"
     unpartial "^1.0.4"
