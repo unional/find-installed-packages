@@ -1,3 +1,10 @@
+## [3.0.3](https://github.com/unional/find-installed-packages/compare/v3.0.2...v3.0.3) (2023-06-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency unpartial to v1.0.5 ([#197](https://github.com/unional/find-installed-packages/issues/197)) ([e218017](https://github.com/unional/find-installed-packages/commit/e21801780f1d7ec13d49f8e58d1b12d075790362))
+
 ## [3.0.2](https://github.com/unional/find-installed-packages/compare/v3.0.1...v3.0.2) (2023-03-15)
 
 
