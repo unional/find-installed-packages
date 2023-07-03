@@ -1972,10 +1972,10 @@ asap@^2.0.0:
   resolved "https://registry.yarnpkg.com/asap/-/asap-2.0.6.tgz#e50347611d7e690943208bbdafebcbc2fb866d46"
   integrity sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==
 
-assertron@11.2.2:
-  version "11.2.2"
-  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.2.2.tgz#58317518d1717e4da1fba9aedafb5e7a54e9f3c0"
-  integrity sha512-4ohX+DzAZ6+/+Ph/cb3dYrw7D7bkRpMepzsHJZAh8n5g84sfjPV+6M5aYVrd0otJXia5qyQ3p3sXcCY1rcHBgA==
+assertron@11.3.0:
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/assertron/-/assertron-11.3.0.tgz#efce9baf148da095f11683da653c7c9dc3240393"
+  integrity sha512-mxFiZDdS8XvgmicSL3aZZ+SVVFVY8R+dnq/A5eGMFbFkVJk2BY8y2yFhsPpbft9Hk2vZgs7tRThwcMMM6i2jtw==
   dependencies:
     is-promise "^4.0.0"
     iso-error "^6.0.0"
