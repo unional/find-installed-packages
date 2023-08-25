@@ -61,7 +61,7 @@
     "@typescript-eslint/parser": "5.62.0",
     "assertron": "11.5.0",
     "depcheck": "1.4.5",
-    "eslint": "8.47.0",
+    "eslint": "8.48.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-harmony": "7.1.2",
     "husky": "8.0.3",
