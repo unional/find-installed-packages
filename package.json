@@ -56,7 +56,7 @@
     "@semantic-release/github": "8.1.0",
     "@semantic-release/npm": "9.0.2",
     "@types/jest": "29.5.7",
-    "@types/temp": "0.9.3",
+    "@types/temp": "0.9.4",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
     "assertron": "11.5.0",

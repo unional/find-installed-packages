@@ -1674,10 +1674,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
 
-"@types/temp@0.9.3":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@types/temp/-/temp-0.9.3.tgz#608a496a9962e4646423393c031330848665328a"
-  integrity sha512-nGBEaq8uLbc+mDhpEE6bJHgR4d0WUUfJTBHXxRQsdLVLwZVfBl8F6HKl15MeAhrp3OlQgExyec7HG6JJ3xPzLw==
+"@types/temp@0.9.4":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@types/temp/-/temp-0.9.4.tgz#69bd4b0e8fc4d54db06bd1b613c19292d333350b"
+  integrity sha512-+VfWIwrlept2VBTj7Y2wQnI/Xfscy1u8Pyj/puYwss6V1IblXn1x7S0S9eFh6KyBolgLCm+rUFzhFAbdkR691g==
   dependencies:
     "@types/node" "*"
 
