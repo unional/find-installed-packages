@@ -62,7 +62,7 @@
     "assertron": "11.5.0",
     "depcheck": "1.4.7",
     "eslint": "8.55.0",
-    "eslint-config-prettier": "9.0.0",
+    "eslint-config-prettier": "9.1.0",
     "eslint-plugin-harmony": "7.1.2",
     "husky": "8.0.3",
     "jest": "29.7.0",
